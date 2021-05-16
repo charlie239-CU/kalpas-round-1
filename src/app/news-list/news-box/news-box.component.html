@@ -1,0 +1,19 @@
+<div class="card shadow" style="max-height:250px" >
+  <div class="d-flex flex-row-reverse ">
+    <button class="btn-close" type="button" (click)="onClose($event)"></button>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title  text-truncate d-lg-block d-none"  style="width: 15rem;"><b>{{info.title}}</b></h5>
+    <p class="card-text  text-truncate d-lg-block d-none"  style="width: 10rem;">{{info.summary}} </p>
+    <h6 class="card-subtitle text-muted  text-truncate d-lg-block d-none"  style="width: 8rem;">
+      {{info.published}}
+    </h6>
+    <h5 class="card-title  text-truncate d-lg-none d-block"  style="width: 10rem;"><b>{{info.title}}</b></h5>
+    <p class="card-text  text-truncate d-lg-none d-block"  style="width: 15rem;">{{info.summary}} </p>
+    <h6 class="card-subtitle text-muted  text-truncate d-lg-none d-block" >
+      {{info.published}}
+    </h6>
+    <img width="150px" height=100px src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Momo_nepal.jpg/1200px-Momo_nepal.jpg" alt="img" class=" rounded card-img">
+  </div>
+
+</div>

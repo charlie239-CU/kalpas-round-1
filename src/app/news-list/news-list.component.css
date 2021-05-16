@@ -1,0 +1,25 @@
+#overlay{
+  width:50%;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  background-color:#E7EEF3 ;
+  border-top-right-radius:20px ;
+  border-bottom-right-radius: 20px;
+  animation-delay: 1000ms;
+
+}
+@media only screen and (max-width: 600px){
+  #overlay{
+    width:100%;
+  }
+}
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
