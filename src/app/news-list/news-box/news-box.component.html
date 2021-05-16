@@ -1,19 +1,29 @@
-<div class="card shadow" style="max-height:250px" >
-  <div class="d-flex flex-row-reverse ">
+<div class="row bg-white shadow make-round" style="max-height:230px" >
+
+  <div class="d-flex flex-row-reverse px-0">
     <button class="btn-close" type="button" (click)="onClose($event)"></button>
   </div>
-  <div class="card-body">
-    <h5 class="card-title  text-truncate d-lg-block d-none"  style="width: 15rem;"><b>{{info.title}}</b></h5>
-    <p class="card-text  text-truncate d-lg-block d-none"  style="width: 10rem;">{{info.summary}} </p>
-    <h6 class="card-subtitle text-muted  text-truncate d-lg-block d-none"  style="width: 8rem;">
-      {{info.published}}
-    </h6>
-    <h5 class="card-title  text-truncate d-lg-none d-block"  style="width: 10rem;"><b>{{info.title}}</b></h5>
-    <p class="card-text  text-truncate d-lg-none d-block"  style="width: 15rem;">{{info.summary}} </p>
-    <h6 class="card-subtitle text-muted  text-truncate d-lg-none d-block" >
-      {{info.published}}
-    </h6>
-    <img width="130px" height=120px src="{{info.image?info.image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToTTmmGkYr2I3dMnTuY6yvnMRazwI9O5Z8sg&usqp=CAU'}}" alt="img" class=" rounded card-img">
+  <div class="row pb-2  align-items-center justify-content-center">
+  <div class="row">
+    <div class="col-8 text-truncate">
+      <b>{{info.title}}</b>
+      </div>
   </div>
+<div class="row">
+    <div class="col-12 text-truncate ">
+      {{info.summary}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-truncate ">
+        <p class="text-muted ">{{info.published}}</p>
+        </div>
+      </div>
+        <div class="col-12">
+         <img width="80px"
+          height=110px
+          src="{{info.image?info.image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToTTmmGkYr2I3dMnTuY6yvnMRazwI9O5Z8sg&usqp=CAU'}}" alt="img" class=" rounded card-img">
+      </div>
+</div>
 
 </div>

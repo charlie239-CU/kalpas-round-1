@@ -1,27 +1,40 @@
 
 <div class="row">
-  <div class="col-lg-11 col-11 p-0">
-    <div class="card shadow bg-white  d-flex align-items-center make-round px-lg-4 p-0 pl-lg-0 " style="flex-direction: row; max-height:93px;background-color: transparent">
-
-      <img height=60px width=60px  src="{{info.image?info.image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToTTmmGkYr2I3dMnTuY6yvnMRazwI9O5Z8sg&usqp=CAU'}}" alt="img" class=" rounded-circle ">
-      <div class="card-body ">
-        <h5 class="card-title col-4 text-truncate d-lg-block d-none"  style="width: 25rem;"><b>{{info.title}}</b></h5>
-        <p class="card-text mb-lg-2 mt-lg-0  text-truncate d-lg-block d-none" style="width: 38rem;">{{info.summary}} </p>
-        <h6 class="card-subtitle text-muted  text-truncate d-lg-block d-none"  >
-          {{info.published}}
-        </h6>
-        <h5 class="card-title col-4 text-truncate d-lg-none d-block"  style="width: 10rem;"><b>{{info.title}}</b></h5>
-        <p class="card-text mb-lg-2 mt-lg-0  text-truncate d-lg-none d-block" style="width: 13rem;">{{info.summary}} </p>
-        <h6 class="card-subtitle text-muted  text-truncate d-lg-none d-block" style="width: 11rem;" >
-          {{info.published}}
-        </h6>
+  <div class="col-lg-11  col-11 shadow bg-white   make-round " >
+      <div class="row d-flex align-items-center justify-content-center" >
+        <div class="col-1 col-sm-1 col-lg-1
+        d-flex align-items-center justify-content-center
+         col-md-1  px-0">
+          <img
+          src="{{info.image?info.image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToTTmmGkYr2I3dMnTuY6yvnMRazwI9O5Z8sg&usqp=CAU'}}"
+          alt="img"
+          height="70%"
+          width="70%"
+          class="mx-0 px-0 make-round-img"
+          >
         </div>
-      </div>
+      <div class="col-11 pt-4 ">
+        <div class="row">
+          <div class="col-5 text-truncate">
+            <b>{{info.title}}</b>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-truncate">
+            {{info.summary}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-truncate">
+            <p class="text-muted">{{info.published}}</p>
+          </div>
+        </div>
+
+        </div>
+    </div>
   </div>
-  <div class="col-lg-1  col-1 d-flex align-items-center">
-
-      <b><p class="text-danger text-center border border-dark rounded-circle" role="button" (click)="onClose()">&nbsp;&times;&nbsp;</p></b>
-
+  <div class="mx-0 py-0 col-1 d-flex align-items-center">
+    <b><p class="text-danger text-center border border-dark rounded-circle" role="button" (click)="onClose()">&nbsp;&times;&nbsp;</p></b>
   </div>
 </div>
 

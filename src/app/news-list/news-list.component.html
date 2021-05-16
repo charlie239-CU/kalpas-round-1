@@ -1,4 +1,4 @@
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 ml-4 ">
   <div id="overlay" *ngIf="overlay" [ngStyle]="{'translation':overlay?'moveToRight 2s ease-in-out':' '}" [ngClass]="overlay?'fadeIn':''" class="p-3 m-0 rounded-right shadow fadeIn">
     <h4>Thank You So much For taking the time!</h4>
     <p class="lead">Please Provide the below details</p>
@@ -41,7 +41,7 @@
   </div>
   <div class="row" style="z-index:0;" [ngStyle]="{'filter': filter}">
     <div *ngIf="tiles===true;else box">
-      <div class="col-lg-12 mt-3 m-lg-4" *ngFor="let p of newsData | paginate :{
+      <div class="col-lg-12 col-12 mt-1 m-lg-2" *ngFor="let p of newsData | paginate :{
       itemsPerPage:5,currentPage:page,totalItems:totalLength
       };let i=index">
           <app-news [info]="p"  (close)="onClose($event)"></app-news>
@@ -52,7 +52,7 @@
 
     <ng-template #box>
 
-        <div class="col-lg-4 mt-4" *ngFor="let p of newsData | paginate :{
+        <div class="col-lg-4 col-12 p-4 " *ngFor="let p of newsData | paginate :{
           itemsPerPage:6,currentPage:page,totalItems:totalLength
           };let i =index">
               <app-news-box [info]="p" (close)="onClose($event)" ></app-news-box>
@@ -61,9 +61,9 @@
     </ng-template>
 
   </div>
-  <div class="row d-flex justify-content-center m-lg-4 " style="z-index:0">
-    <div class="col-lg-5 col-12">
-      <pagination-controls directionLinks="false" responsive="true" maxSize="5" (pageChange)="page=$event" ></pagination-controls>
+  <div class="row d-flex justify-content-center align-items-center m-lg-4 " style="z-index:0">
+    <div class="col-lg-5 col-12 text-center">
+      <pagination-controls directionLinks="false"  maxSize="5" (pageChange)="page=$event" ></pagination-controls>
     </div>
 
   </div>
