@@ -8,9 +8,13 @@ import { MediatorService } from './common/mediator-service';
 })
 export class AppComponent implements OnInit{
   title = 'Project';
+  overlay:boolean=false;
   isMenuCollapsed:boolean=false;
   constructor(private mService:MediatorService ){}
   ngOnInit(){
+    this.mService.overlay.subscribe((data:boolean)=>{
+      this.overlay=data;
 
+    })
   }
 }

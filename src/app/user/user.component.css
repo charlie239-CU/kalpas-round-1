@@ -4,3 +4,7 @@
 .container-fluid{
   padding-bottom: 20%;
 }
+.inner-shadow{
+    box-shadow:         inset 0 0 2px #757272;
+
+}

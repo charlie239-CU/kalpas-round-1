@@ -1,43 +1,55 @@
-<div class="container-fluid pt-lg-4 pr-lg-0 p-4">
-  <div class="row">
-    <div class="col-12">
-      <div class="make-round bg-white m-lg-3 p-lg-2  shadow ">
-        <div class="row d-flex align-items-center">
-          <div class="col-4  ">
-            <img src="https://i.pinimg.com/736x/0a/53/c3/0a53c3bbe2f56a1ddac34ea04a26be98.jpg" class=" img-fluid"
-              alt="Profile Pic" >
-          </div>
-          <div class="col-8">
-                <h4 class="text-truncate">Vivek Rawat</h4>
-                <span class="text-muted">This is by Vivek Rawat</span>
-          </div>
-
+<div class="container-fluid pt-lg-4 pr-lg-0 p-1">
+  <div class="row d-flex justify-content-center ">
+    <div class="col-10 bg-white shadow make-round mt-4">
+      <div class="row d-flex align-items-center">
+        <div class="col-4 p-0">
+          <img src="https://i.pinimg.com/736x/0a/53/c3/0a53c3bbe2f56a1ddac34ea04a26be98.jpg" class="p-1 img-fluid"
+            alt="Profile Pic">
         </div>
-      </div>
-    </div>
-
-    <div class="col-12 mt-1" *ngIf="!open">
-      <div class="card make-round rounded-lg m-lg-3 my-lg-2 p-lg-2 shadow">
-        <div class="d-flex flex-column ">
-          <h3 class="my-2 text-center">View Toggle</h3>
-          <div class="row d-flex justify-content-center align-items-center mb-2 mb-lg-0 " style="height:40px" >
-            <div class="col-lg-3 col-3 rounded-start d-flex justify-content-center align-items-center" [ngStyle]="{'backgroundColor':tiles?'#93E7C4':'#D0D8E1'}"  style="height:40px" type=button (click)="viewSet(true)">
-              <i class="fa fa-list fa-2x" aria-hidden="true"></i>
+        <div class="col-8 mt-1">
+          <div class="row ">
+            <div class="col-12 p-0 ">
+              <h6 class="mb-0"><b>Vivek Rawat</b></h6>
             </div>
-            <div class="col-lg-3 col-3 rounded-end  d-flex justify-content-center align-items-center " [ngStyle]="{'backgroundColor':tiles?'#D0D8E1':'#93E7C4'}" style="height:40px"  type=button (click)="viewSet(false)">
-              <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-12 p-0">
+              <small >This is by Vivek Rawat</small>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-12 mt-1">
-      <div class="card make-round rounded-lg m-lg-3 p-lg-2 shadow" (click)="show_overlay()">
-        <div class="d-flex flex-column ">
-          <h3 class="my-2 text-center" role="button" >Have a FeedBack?</h3>
-          <div class=" rounded mx-4 mb-2 mb-lg-0" style="min-height:50px; background-color:#93E7C4;">
-            <h6 class="text-center mt-2 lead"><b>We're Listening!</b></h6>
+    <div class="col-10  mt-4" *ngIf="!open">
+      <div class="row bg-white d-flex justify-content-center make-round  shadow">
+        <div class="col-12">
+          <h5 class="my-2 text-center"><b>View Toggle</b></h5>
+        </div>
+        <div class="  row d-flex justify-content-center    mb-2 mb-lg-0 " style="height:80px">
+          <div class="col-6 rounded-start  d-flex justify-content-center align-items-center"
+            [ngStyle]="{'backgroundColor':tiles?'#93E7C4':'#D0D8E1'}" style="height:70px ;" type=button
+            (click)="viewSet(true)">
+            <i class="fa fa-list fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col-6 rounded-end  d-flex justify-content-center align-items-center "
+            [ngStyle]="{'backgroundColor':tiles?'#D0D8E1':'#93E7C4'}" style="height:70px;" type=button
+            (click)="viewSet(false)">
+            <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-10 mt-4">
+      <div class="row d-flex justify-content-center bg-white make-round  shadow" >
+        <div class="col-12">
+          <p class="my-2 text-center lead"  ><b>Have a FeedBack?</b></p>
+        </div>
+        <div class="row my-2 ">
+          <div  (click)="show_overlay()" [ngStyle]="{'backgroundColor':open?'#E9A3A6':'#93E7C4'}" role="button" class=" inner-shadow col-12  d-flex align-items-center justify-content-center rounded mx-1 mb-2 mb-lg-0"
+            style="min-height:50px; ">
+            <p class="text-center mb-0 "><b>We're Listening!</b></p>
           </div>
         </div>
       </div>

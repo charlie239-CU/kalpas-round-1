@@ -1,13 +1,17 @@
 #overlay{
   width:50%;
   position: absolute;
-  height: 100%;
+  height: 110%;
   z-index: 1;
+  padding:0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px ;
   background-color:#E7EEF3 ;
   border-top-right-radius:20px ;
   border-bottom-right-radius: 20px;
   animation-delay: 1000ms;
-
+  box-shadow: 6px 8px 6px -6px rgb(153, 149, 149);
+  padding-left: 0px;
+  padding-bottom: 0px;
 }
 @media only screen and (max-width: 600px){
   #overlay{
@@ -23,3 +27,16 @@
   }
 }
 
+.container-fluid
+{
+  padding-top: 40px;
+  padding-left: 90px;
+  padding-right: 90px;
+
+}
+.make-padding{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}

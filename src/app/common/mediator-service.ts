@@ -45,9 +45,14 @@ fetchPosts()
 
 
     onSubmitForm(formData){
-    this.http.post(environment.apiKey,formData)
-    .subscribe(res=>{
+      if(!formData.valid)
+    {
 
+      this.http.post(environment.apiKey,formData)
+    .subscribe(res=>{
+      this.overlay.next(false);
     })
+  }
+
     }
 }

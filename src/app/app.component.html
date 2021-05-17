@@ -2,14 +2,14 @@
 <div class="container-fluid " >
 
 
-  <div class="row ">
+  <div class="row " style="height:100vh;">
 
-    <div class="col-lg-4 col-sm border-end shadow " >
+    <div class="col-lg-3 col-sm border-end  " [ngClass]="overlay?'':'shadow'" >
 
       <app-user></app-user>
    </div>
 
-   <div class="col-lg-8 px-4 pt-4">
+   <div class="col-lg-9 p-0">
     <app-news-list></app-news-list>
    </div>
   </div>

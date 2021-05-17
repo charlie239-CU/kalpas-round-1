@@ -1,5 +1,6 @@
-<div class="container-fluid p-0 ml-4 ">
-  <div id="overlay" *ngIf="overlay" [ngStyle]="{'translation':overlay?'moveToRight 2s ease-in-out':' '}" [ngClass]="overlay?'fadeIn':''" class="p-3 m-0 rounded-right shadow fadeIn">
+<div id="overlay" *ngIf="overlay" [ngStyle]="{'translation':overlay?'moveToRight 2s ease-in-out':' '}"
+  [ngClass]="overlay?'fadeIn':''" class=" m-0  rounded-right  fadeIn">
+  <div class="make-padding">
     <h4>Thank You So much For taking the time!</h4>
     <p class="lead">Please Provide the below details</p>
     <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
@@ -7,44 +8,55 @@
         <div class="form-group">
           <label for="FName">First Name:</label>
           <input type="text" class="form-control input-sm shadow" size="15" formControlName="fname" name="fname">
-          <p class="text-muted text-danger" *ngIf="!signUpForm.get('name.fname').valid && signUpForm.get('name.fname').touched ">*Please Enter First Name</p>
+          <p class="text-muted text-danger"
+            *ngIf="!signUpForm.get('name.fname').valid && signUpForm.get('name.fname').touched ">*Please Enter First
+            Name</p>
         </div>
         <div class="form-group">
           <label for="LName">Last Name:</label>
           <input type="text" class="form-control shadow" name="lname" formControlName="lname">
-          <p class="text-muted text-danger" *ngIf="!signUpForm.get('name.lname').valid && signUpForm.get('name.lname').touched ">*Please Enter First Name</p>
+          <p class="text-muted text-danger"
+            *ngIf="!signUpForm.get('name.lname').valid && signUpForm.get('name.lname').touched ">*Please Enter First
+            Name</p>
         </div>
       </div>
       <div class="form-group">
         <label for="Address">Address:</label>
         <textarea name="address" class="form-control shadow" formControlName="address"></textarea>
-        <p class="text-muted text-danger" *ngIf="!signUpForm.get('address').valid && signUpForm.get('address').touched ">*Please Enter Address</p>
+        <p class="text-muted text-danger"
+          *ngIf="!signUpForm.get('address').valid && signUpForm.get('address').touched ">*Please Enter Address</p>
       </div>
       <div class="form-group">
         <label for="country">Country:</label>
         <input type="text" class="form-control shadow" name="country" formControlName="country">
-        <p class="text-muted text-danger" *ngIf="!signUpForm.get('country').valid && signUpForm.get('country').touched ">*Please Enter Your Country</p>
+        <p class="text-muted text-danger"
+          *ngIf="!signUpForm.get('country').valid && signUpForm.get('country').touched ">*Please Enter Your Country</p>
       </div>
       <div class="form-group">
         <label for="email">Email Address:</label>
         <input type="email" class="form-control shadow" name="email" formControlName="email">
-        <p class="text-muted text-danger" *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched ">*Please Enter Valid Email Address</p>
+        <p class="text-muted text-danger" *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched ">
+          *Please Enter Valid Email Address</p>
       </div>
       <div class="form-group">
         <label for="phone">Phone No.:</label>
         <input type="number" class="form-control shadow" name="phone" formControlName="phone">
-        <p class="text-muted text-danger" *ngIf="!signUpForm.get('phone').valid && signUpForm.get('phone').touched ">* Enter Valid Phone Number </p>
+        <p class="text-muted text-danger" *ngIf="!signUpForm.get('phone').valid && signUpForm.get('phone').touched ">*
+          Enter Valid Phone Number </p>
 
       </div>
-      <button type="submit" class="btn btn-success mt-4 shadow">Submit Feedback</button>
+      <button type="submit" [disabled]="!signUpForm.valid" class="btn btn-success mt-4 shadow">Submit Feedback</button>
     </form>
   </div>
+</div>
+<div class="container-fluid  ">
+
   <div class="row" style="z-index:0;" [ngStyle]="{'filter': filter}">
     <div *ngIf="tiles===true;else box">
-      <div class="col-lg-12 col-12 mt-1 m-lg-2" *ngFor="let p of newsData | paginate :{
+      <div class=" col-12 mt-1 " *ngFor="let p of newsData | paginate :{
       itemsPerPage:5,currentPage:page,totalItems:totalLength
       };let i=index">
-          <app-news [info]="p"  (close)="onClose($event)"></app-news>
+        <app-news [info]="p" (close)="onClose($event)"></app-news>
 
 
       </div>
@@ -52,18 +64,18 @@
 
     <ng-template #box>
 
-        <div class="col-lg-4 col-12 p-4 " *ngFor="let p of newsData | paginate :{
+      <div class="col-lg-4 col-12 mt-3 " *ngFor="let p of newsData | paginate :{
           itemsPerPage:6,currentPage:page,totalItems:totalLength
           };let i =index">
-              <app-news-box [info]="p" (close)="onClose($event)" ></app-news-box>
-          </div>
+        <app-news-box [info]="p" (close)="onClose($event)"></app-news-box>
+      </div>
 
     </ng-template>
 
   </div>
   <div class="row d-flex justify-content-center align-items-center m-lg-4 " style="z-index:0">
     <div class="col-lg-5 col-12 text-center">
-      <pagination-controls directionLinks="false"  maxSize="5" (pageChange)="page=$event" ></pagination-controls>
+      <pagination-controls directionLinks="false" maxSize="5" (pageChange)="page=$event"></pagination-controls>
     </div>
 
   </div>

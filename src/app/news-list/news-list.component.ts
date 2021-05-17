@@ -15,7 +15,7 @@ export class NewsListComponent implements OnInit {
   totalLength:any;
   page:number=1;
 
-  tiles:boolean=true;
+  tiles:boolean=false;
   fetchedData:any
   newsData:DataModel[]
   signUpForm:FormGroup

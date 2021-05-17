@@ -8,7 +8,7 @@ import { MediatorService } from '../common/mediator-service';
 })
 export class UserComponent implements OnInit {
   open:boolean=false;
-  tiles:boolean=true;
+  tiles:boolean=false;
   constructor(private mService:MediatorService) { }
 
   ngOnInit(): void {
